@@ -138,7 +138,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   order: 2;
-  background: #C1CAD6;
+  background: #D6D9E0;
   width: 70px;
   margin-left: 20px;
   border-radius: 35px;
@@ -209,6 +209,7 @@ a:hover {
   background: var(--accent-color);
   color: var(--background-color);
   padding: 6px 12px;
+  margin: 5px 5px 0 0;
   border-radius: 15px;
   font-size: 0.9rem;
   font-weight: 600;
