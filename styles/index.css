@@ -94,6 +94,9 @@ a:hover {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   flex: 1;
   background: var(--background-color-2);
   padding: 2rem;
@@ -101,12 +104,18 @@ a:hover {
 }
 
 .content-card {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
 }
 
 .content-card:hover {
   transform: translateY(-5px);
+}
+
+.content-card:last-of-type {
+  border-bottom: none;
 }
 
 .menu {
@@ -158,6 +167,7 @@ a:hover {
 
 /*=============== SKILLS ===============*/
 .col-2 {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -186,6 +196,7 @@ a:hover {
   max-width: 100%;
   padding: 1rem 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .gallery iframe {
