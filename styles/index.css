@@ -379,6 +379,23 @@ h2 {
   margin: 50px 0;
 }
 
+/*=============== Gallery ===============*/
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.gallery iframe {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
 /*=============== FORM ===============*/
 
 form {
