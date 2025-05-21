@@ -203,6 +203,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  min-width: 0; /* Fix 2: Prevent overflow by allowing wrapping */
 }
 
 .skill {
@@ -215,6 +216,7 @@ a:hover {
   font-weight: 600;
   white-space: nowrap;
   transition: background 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0; /* Fix 1: Prevents skills from shrinking into each other */
 }
 
 .skill:hover {
@@ -222,6 +224,7 @@ a:hover {
   transform: scale(1.05);
   color: var(--accent-color);
 }
+
 
 /*=============== GALLERY ===============*/
 .gallery-frame-wrapper {
