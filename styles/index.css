@@ -96,10 +96,10 @@ a:hover {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
   flex: 1;
   background: var(--background-color-2);
-  padding: 2rem;
+  padding: 3rem 2rem;
   overflow-y: auto;
 }
 
@@ -110,12 +110,13 @@ a:hover {
   transition: transform 0.3s ease;
 }
 
-.content-card:hover {
-  transform: translateY(-5px);
-}
-
 .content-card:last-of-type {
   border-bottom: none;
+  margin-bottom: 0;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
 }
 
 .menu {
@@ -196,7 +197,6 @@ a:hover {
   max-width: 100%;
   padding: 1rem 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .gallery iframe {
@@ -206,7 +206,6 @@ a:hover {
   border: none;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-
 
 /*=============== SCROLL REVEAL ===============*/
 .reveal {
@@ -233,12 +232,17 @@ a:hover {
   }
 
   .menu {
-    flex-direction: row;
-    top: unset;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    left: auto;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
   }
+
 }
 
 @media screen and (max-width: 400px) {
