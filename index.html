@@ -10,6 +10,20 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
 <body>
 
 <nav id="navbar" class="navbar"><a href="#"></a></nav>
@@ -40,13 +54,13 @@
     <div class="content">
       
       <!-- Home -->
-      <section class="content-card home" id="welcome-section">
+      <section class="content-card home reveal" id="welcome-section">
         <h1>Hi, I'm <u>Charles Cheesman</u></h1>
         <p>Creative professional focused on bringing ideas to life through animation, video, and interactive media.</p>
       </section>
 
       <!-- About Me -->
-      <section class="content-card about" id="about">
+      <section class="content-card about reveal" id="about">
         <h1>About Me</h1>
         <div class="about-item about-me">
           <p>
@@ -59,7 +73,7 @@
       </section>
 
       <!-- Skills -->
-      <section class="content-card skills" id="skills">
+      <section class="content-card skills reveal" id="skills">
         <h1>Skills</h1>
         <div class="col-2">
           <div class="about-item skills">
@@ -81,7 +95,7 @@
       </section>
 
       <!-- Experience -->
-      <section class="content-card experience" id="experience">
+      <section class="content-card experience reveal" id="experience">
         <h1>Experience</h1>
         <div class="timeline">
           <div class="timeline-items">
@@ -139,7 +153,7 @@
       </section>
 
       <!-- Contact -->
-      <section class="content-card contact" id="contact">
+      <section class="content-card contact reveal" id="contact">
         <h1>Contact</h1>
         <h2>Email all requests to:</h2>
         <h3>Cheeseyproblems@gmail.com</h3>
