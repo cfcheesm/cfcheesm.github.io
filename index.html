@@ -1,184 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/styles/index.css" />
   <title>Charles Cheesman</title>
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/styles/index.css" />
 </head>
 
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  reveals.forEach(el => observer.observe(el));
-</script>
 <body>
+  <nav id="navbar"><a href="#"></a></nav>
 
-<nav id="navbar" class="navbar"><a href="#"></a></nav>
+  <div class="container">
+    <!-- Navigation -->
+    <div class="menu">
+      <a href="#welcome-section"><i class="fa-solid fa-house menu-icon"></i></a>
+      <a href="#about"><i class="fa-solid fa-user menu-icon"></i></a>
+      <a href="#skills"><i class="fa-solid fa-code menu-icon"></i></a>
+      <a href="#experience"><i class="fa-solid fa-briefcase menu-icon"></i></a>
+      <a href="#gallery"><i class="fa-solid fa-images menu-icon"></i></a>
+      <a href="#contact"><i class="fa-solid fa-envelope menu-icon"></i></a>
+    </div>
 
-<div class="container">
-  <!-- Navigation Menu -->
-  <div class="menu">
-    <a href="#welcome-section"><i class="fa-solid fa-house menu-icon"></i></a>
-    <a href="#about"><i class="fa-solid fa-user menu-icon"></i></a>
-    <a href="#skills"><i class="fa-solid fa-code menu-icon"></i></a>
-    <a href="#experience"><i class="fa-solid fa-briefcase menu-icon"></i></a>
-    <a href="#gallery"><i class="fa-solid fa-images menu-icon"></i></a>
-    <a href="#contact"><i class="fa-solid fa-envelope menu-icon"></i></a>
-  </div>
-
-  <div class="portfolio">
-    <!-- Header Section -->
-    <section class="header">
-      <img class="header-img" src="/assets/img/CheeseLogo.png" alt="Charles Cheesman" />
-      <h1>Charles Cheesman</h1>
-      <h2>Multi-Media Artist / Developer</h2>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/charles-cheesman-5153b5137/" target="_blank" class="fa-brands fa-linkedin-in" id="profile-link"></a>
-        <a href="https://www.instagram.com/cheesey_problems/" target="_blank" class="fa-brands fa-instagram"></a>
-      </div>
-    </section>
-
-    <!-- Content Area -->
-    <div class="content">
-      
-      <!-- Home -->
-      <section class="content-card home reveal" id="welcome-section">
-        <h1>Hi, I'm <u>Charles Cheesman</u></h1>
-        <p>Creative professional focused on bringing ideas to life through animation, video, and interactive media.</p>
+    <!-- Main Portfolio Area -->
+    <div class="portfolio">
+      <!-- Sidebar Header -->
+      <section class="header">
+        <img class="header-img" src="/assets/img/CheeseLogo.png" alt="Charles Cheesman" />
+        <h1>Charles Cheesman</h1>
+        <h2>Multi-Media Artist / Developer</h2>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/charles-cheesman-5153b5137/" target="_blank" class="fa-brands fa-linkedin-in"></a>
+          <a href="https://www.instagram.com/cheesey_problems/" target="_blank" class="fa-brands fa-instagram"></a>
+        </div>
       </section>
 
-      <!-- About Me -->
-      <section class="content-card about reveal" id="about">
-        <h1>About Me</h1>
-        <div class="about-item about-me">
+      <!-- Content Section -->
+      <div class="content">
+        <!-- Welcome -->
+        <section class="content-card home reveal" id="welcome-section">
+          <h1>Hi, I'm <u>Charles Cheesman</u></h1>
+          <p>Creative professional focused on bringing ideas to life through animation, video, and interactive media.</p>
+        </section>
+
+        <!-- About -->
+        <section class="content-card about reveal" id="about">
+          <h1>About Me</h1>
           <p>
             I’m a multimedia artist and developer specializing in 3D content creation, animation, and interactive media.
-            With a strong foundation in both design and development, I bring a methodical and results-driven approach to every project.
             I focus on delivering high-quality, technically sound solutions that align with business goals and user needs.
-            Passionate about XR and emerging technologies, I aim to create immersive experiences that drive engagement, elevate brand identity, and push the boundaries of digital interaction.
+            Passionate about XR and emerging technologies, I aim to create immersive experiences that drive engagement and elevate brand identity.
           </p>
-        </div>
-      </section>
+        </section>
 
-      <!-- Skills -->
-      <section class="content-card skills reveal" id="skills">
-        <h1>Skills</h1>
-        <div class="col-2">
-          <div class="about-item skills">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">After Effects</span>
-            <span class="skill">Unreal Engine</span>
-            <span class="skill">Autodesk Maya</span>
-            <span class="skill">Ableton Live</span>
-            <span class="skill">Pro Tools</span>
-            <span class="skill">Photoshop</span>
-            <span class="skill">Substance Painter</span>
-            <span class="skill">ZBrush</span>
-            <span class="skill">MadMapper</span>
-            <span class="skill">Premiere Pro</span>
-            <span class="skill">Unity</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience -->
-      <section class="content-card experience reveal" id="experience">
-        <h1>Experience</h1>
-        <div class="timeline">
-          <div class="timeline-items">
-            <div class="timeline-item">
-              <div class="timeline-date">June 2023 – January 2025</div>
-              <div class="timeline-content">
-                <h3>Bimaire (Berkshire Hathaway) – 3D Generalist</h3>
-                <p>Developed photorealistic, game-ready 3D assets and environments based on BIM data for real-time use in Unreal Engine 5.</p>
-                <p>Optimized high-fidelity models, textures, and materials for animations and stills.</p>
-                <p><strong>Tools:</strong> Unreal Engine 5, Adobe Suite, Substance Painter, Autodesk Maya, Autodesk 3DS Max</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">March 2021 – Present (Contract)</div>
-              <div class="timeline-content">
-                <h3>MicroMetl – 3D Generalist</h3>
-                <p>Created industrial 3D models, textures, and motion graphics for HVAC product marketing and training content.</p>
-                <p>Built VR sales tools and optimized assets for XR pipelines, improving internal workflows and client demos.</p>
-                <p><strong>Tools:</strong> Autodesk Maya, Substance Suite, Adobe Suite, Unreal Engine 5</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">July 2021 – Present (Part-Time / Freelance)</div>
-              <div class="timeline-content">
-                <h3>Mapmaker – Environment Artist / 3D Generalist</h3>
-                <p>Designed and implemented modular environments and reactive materials for immersive XR experiences.</p>
-                <p>Supported real-time rendering and VR application development across platforms.</p>
-                <p><strong>Tools:</strong> Unreal Engine 5, Maya, Substance Suite, Adobe Suite</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">May 2017 – April 2022</div>
-              <div class="timeline-content">
-                <h3>Blockhouse Studios / White Tree Creative Group – 3D Generalist / Content Creator</h3>
-                <p>Created immersive multimedia content including VR experiences and interactive installations like <a href="https://www.youtube.com/watch?v=U5iIwO4kxbE" target="_blank">Harvest Nights at Newfields</a>.</p>
-                <p>Handled live event production and developed branded content for social, video, and experiential marketing.</p>
-                <p><strong>Tools:</strong> Unreal Engine 4, Adobe Creative Suite, Maya, OBS, Blackmagic Hardware, MadMapper</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">May 2013 – Present</div>
-              <div class="timeline-content">
-                <h3>IATSE – Journeyman Stagehand</h3>
-                <p>Skilled in live production setup for concerts, theater, and televised events, including rigging, lighting, audio, and video systems.</p>
-                <p>Experience across national tours and local productions; known for reliability, safety, and adaptability under pressure.</p>
-                <p><strong>Tools:</strong> ETC lighting consoles, QLab, Clear-Com systems, Panasonic/L-Acoustics gear</p>
-              </div>
+        <!-- Skills -->
+        <section class="content-card skills reveal" id="skills">
+          <h1>Skills</h1>
+          <div class="col-2">
+            <div class="about-item skills">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">After Effects</span>
+              <span class="skill">Unreal Engine</span>
+              <span class="skill">Autodesk Maya</span>
+              <span class="skill">Ableton Live</span>
+              <span class="skill">Pro Tools</span>
+              <span class="skill">Photoshop</span>
+              <span class="skill">Substance Painter</span>
+              <span class="skill">ZBrush</span>
+              <span class="skill">MadMapper</span>
+              <span class="skill">Premiere Pro</span>
+              <span class="skill">Unity</span>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Gallery -->
-      <section class="content-card gallery reveal" id="gallery">
-        <h1>Instagram Gallery</h1>
-        <p>Here's some examples of my work<a href="https://www.instagram.com/cheesey_problems/" target="_blank">@cheesey_problems</a> to see more work.</p>
-        
-        <!-- LightWidget WIDGET -->
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-        <iframe src="//lightwidget.com/widgets/f044cab9f9df523b8aa5613013ea08f4.html" 
-                scrolling="no" 
-                allowtransparency="true" 
-                class="lightwidget-widget"
-                style="width:100%; border:0; overflow:hidden; height:500px;">
-        </iframe>
-      </section>
+        <!-- Experience -->
+        <section class="content-card experience reveal" id="experience">
+          <h1>Experience</h1>
+          <div class="timeline">
+            <div class="timeline-items">
+              <div class="timeline-item">
+                <div class="timeline-date">June 2023 – January 2025</div>
+                <div class="timeline-content">
+                  <h3>Bimaire (Berkshire Hathaway) – 3D Generalist</h3>
+                  <p>Developed photorealistic, game-ready 3D assets and environments based on BIM data for real-time use in Unreal Engine 5.</p>
+                  <p>Optimized high-fidelity models, textures, and materials for animations and stills.</p>
+                  <p><strong>Tools:</strong> Unreal Engine 5, Adobe Suite, Substance Painter, Autodesk Maya, Autodesk 3DS Max</p>
+                </div>
+              </div>
 
+              <div class="timeline-item">
+                <div class="timeline-date">March 2021 – Present (Contract)</div>
+                <div class="timeline-content">
+                  <h3>MicroMetl – 3D Generalist</h3>
+                  <p>Created industrial 3D models, textures, and motion graphics for HVAC product marketing and training content.</p>
+                  <p>Built VR sales tools and optimized assets for XR pipelines, improving internal workflows and client demos.</p>
+                  <p><strong>Tools:</strong> Autodesk Maya, Substance Suite, Adobe Suite, Unreal Engine 5</p>
+                </div>
+              </div>
 
-      <!-- Contact -->
-      <section class="content-card contact reveal" id="contact">
-        <h1>Contact</h1>
-        <h2>Email all requests to:</h2>
-        <h3>Cheeseyproblems@gmail.com</h3>
-      </section>
-      
+              <div class="timeline-item">
+                <div class="timeline-date">July 2021 – Present (Part-Time / Freelance)</div>
+                <div class="timeline-content">
+                  <h3>Mapmaker – Environment Artist / 3D Generalist</h3>
+                  <p>Designed and implemented modular environments and reactive materials for immersive XR experiences.</p>
+                  <p>Supported real-time rendering and VR application development across platforms.</p>
+                  <p><strong>Tools:</strong> Unreal Engine 5, Maya, Substance Suite, Adobe Suite</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">May 2017 – April 2022</div>
+                <div class="timeline-content">
+                  <h3>Blockhouse Studios / White Tree Creative Group – 3D Generalist / Content Creator</h3>
+                  <p>Created immersive multimedia content including VR experiences and interactive installations like <a href="https://www.youtube.com/watch?v=U5iIwO4kxbE" target="_blank">Harvest Nights at Newfields</a>.</p>
+                  <p>Handled live event production and developed branded content for social, video, and experiential marketing.</p>
+                  <p><strong>Tools:</strong> Unreal Engine 4, Adobe Creative Suite, Maya, OBS, Blackmagic Hardware, MadMapper</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">May 2013 – Present</div>
+                <div class="timeline-content">
+                  <h3>IATSE – Journeyman Stagehand</h3>
+                  <p>Skilled in live production setup for concerts, theater, and televised events, including rigging, lighting, audio, and video systems.</p>
+                  <p>Experience across national tours and local productions; known for reliability, safety, and adaptability under pressure.</p>
+                  <p><strong>Tools:</strong> ETC lighting consoles, QLab, Clear-Com systems, Panasonic/L-Acoustics gear</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Instagram Gallery -->
+        <section class="content-card gallery reveal" id="gallery">
+          <h1>Instagram Gallery</h1>
+          <p>Here's some examples of my work. Follow <a href="https://www.instagram.com/cheesey_problems/" target="_blank">@cheesey_problems</a> to see more.</p>
+          <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+          <iframe src="//lightwidget.com/widgets/f044cab9f9df523b8aa5613013ea08f4.html"
+                  scrolling="no"
+                  allowtransparency="true"
+                  class="lightwidget-widget"
+                  style="width:100%; border:0; overflow:hidden; height:500px;">
+          </iframe>
+        </section>
+
+        <!-- Contact -->
+        <section class="content-card contact reveal" id="contact">
+          <h1>Contact</h1>
+          <h2>Email all requests to:</h2>
+          <h3>Cheeseyproblems@gmail.com</h3>
+        </section>
+      </div>
     </div>
   </div>
-</div>
 
+  <!-- Scroll Reveal Script -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
